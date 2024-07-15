@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.5.2
+    hooks:
+      - id: ruff
+      - id: ruff-format
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.5.5
+    hooks:
+        - id: insert-license
+          files: "^.*py$"
+          exclude: "^(docs|tests|__init__.py)"
+          args:
+              - --detect-license-in-X-top-lines=6

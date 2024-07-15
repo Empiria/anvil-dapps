@@ -1,0 +1,188 @@
+allow_embedding: false
+package_name: anvil_dapps
+name: Anvil Dapps
+runtime_options:
+  version: 3
+  client_version: '3'
+  server_version: python3-full
+  server_spec: null
+  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup_form: null
+native_deps:
+  head_html: |-
+    <!--
+      JSPM Generator Import Map
+      Edit URL: https://generator.jspm.io/#Zc3BDYMwDEBRH2AOJsA0RhVXL9EBTGKptCGpEleo2xeucP5P+m0D0HaPZItFDcDp63+fp5bBxGe+IeEEvOk89jnNWUoYfC7KhEToTmVJL/Wmod8kRrW6K+cualWTVer7qEigtt8q33FC+gMa40ItjQA
+    -->
+     <script type="importmap">
+    {
+      "imports": {
+        "@nucypher/taco": "https://ga.jspm.io/npm:@nucypher/taco@0.2.7/dist/es/index.js",
+        "@web3-onboard/core": "https://ga.jspm.io/npm:@web3-onboard/core@2.22.1/dist/index.js",
+        "@web3-onboard/injected-wallets": "https://ga.jspm.io/npm:@web3-onboard/injected-wallets@2.11.1/dist/index.js",
+        "@web3-onboard/metamask": "https://ga.jspm.io/npm:@web3-onboard/metamask@2.1.2/dist/index.js",
+        "ethers": "https://ga.jspm.io/npm:ethers@5.7.2/lib.esm/index.js"
+      },
+      "scopes": {
+        "https://ga.jspm.io/": {
+          "#lib/adapters/http.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
+          "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
+          "#lib/platform/node/index.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
+          "#util.inspect.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
+          "@ethersproject/abi": "https://ga.jspm.io/npm:@ethersproject/abi@5.7.0/lib.esm/index.js",
+          "@ethersproject/abstract-provider": "https://ga.jspm.io/npm:@ethersproject/abstract-provider@5.7.0/lib.esm/index.js",
+          "@ethersproject/abstract-signer": "https://ga.jspm.io/npm:@ethersproject/abstract-signer@5.7.0/lib.esm/index.js",
+          "@ethersproject/address": "https://ga.jspm.io/npm:@ethersproject/address@5.7.0/lib.esm/index.js",
+          "@ethersproject/base64": "https://ga.jspm.io/npm:@ethersproject/base64@5.7.0/lib.esm/index.js",
+          "@ethersproject/basex": "https://ga.jspm.io/npm:@ethersproject/basex@5.7.0/lib.esm/index.js",
+          "@ethersproject/bignumber": "https://ga.jspm.io/npm:@ethersproject/bignumber@5.7.0/lib.esm/index.js",
+          "@ethersproject/bytes": "https://ga.jspm.io/npm:@ethersproject/bytes@5.7.0/lib.esm/index.js",
+          "@ethersproject/constants": "https://ga.jspm.io/npm:@ethersproject/constants@5.7.0/lib.esm/index.js",
+          "@ethersproject/contracts": "https://ga.jspm.io/npm:@ethersproject/contracts@5.7.0/lib.esm/index.js",
+          "@ethersproject/hash": "https://ga.jspm.io/npm:@ethersproject/hash@5.7.0/lib.esm/index.js",
+          "@ethersproject/hdnode": "https://ga.jspm.io/npm:@ethersproject/hdnode@5.7.0/lib.esm/index.js",
+          "@ethersproject/json-wallets": "https://ga.jspm.io/npm:@ethersproject/json-wallets@5.7.0/lib.esm/index.js",
+          "@ethersproject/keccak256": "https://ga.jspm.io/npm:@ethersproject/keccak256@5.7.0/lib/index.js",
+          "@ethersproject/logger": "https://ga.jspm.io/npm:@ethersproject/logger@5.7.0/lib.esm/index.js",
+          "@ethersproject/networks": "https://ga.jspm.io/npm:@ethersproject/networks@5.7.1/lib.esm/index.js",
+          "@ethersproject/pbkdf2": "https://ga.jspm.io/npm:@ethersproject/pbkdf2@5.7.0/lib.esm/index.js",
+          "@ethersproject/properties": "https://ga.jspm.io/npm:@ethersproject/properties@5.7.0/lib.esm/index.js",
+          "@ethersproject/providers": "https://ga.jspm.io/npm:@ethersproject/providers@5.7.2/lib.esm/index.js",
+          "@ethersproject/random": "https://ga.jspm.io/npm:@ethersproject/random@5.7.0/lib.esm/index.js",
+          "@ethersproject/rlp": "https://ga.jspm.io/npm:@ethersproject/rlp@5.7.0/lib.esm/index.js",
+          "@ethersproject/sha2": "https://ga.jspm.io/npm:@ethersproject/sha2@5.7.0/lib.esm/index.js",
+          "@ethersproject/signing-key": "https://ga.jspm.io/npm:@ethersproject/signing-key@5.7.0/lib.esm/index.js",
+          "@ethersproject/solidity": "https://ga.jspm.io/npm:@ethersproject/solidity@5.7.0/lib.esm/index.js",
+          "@ethersproject/strings": "https://ga.jspm.io/npm:@ethersproject/strings@5.7.0/lib.esm/index.js",
+          "@ethersproject/transactions": "https://ga.jspm.io/npm:@ethersproject/transactions@5.7.0/lib.esm/index.js",
+          "@ethersproject/units": "https://ga.jspm.io/npm:@ethersproject/units@5.7.0/lib.esm/index.js",
+          "@ethersproject/wallet": "https://ga.jspm.io/npm:@ethersproject/wallet@5.7.0/lib.esm/index.js",
+          "@ethersproject/web": "https://ga.jspm.io/npm:@ethersproject/web@5.7.1/lib.esm/index.js",
+          "@ethersproject/wordlists": "https://ga.jspm.io/npm:@ethersproject/wordlists@5.7.0/lib.esm/index.js",
+          "@formatjs/fast-memoize": "https://ga.jspm.io/npm:@formatjs/fast-memoize@1.2.1/lib/index.js",
+          "@formatjs/icu-messageformat-parser": "https://ga.jspm.io/npm:@formatjs/icu-messageformat-parser@2.1.0/lib/index.js",
+          "@formatjs/icu-skeleton-parser": "https://ga.jspm.io/npm:@formatjs/icu-skeleton-parser@1.3.6/lib/index.js",
+          "@metamask/sdk": "https://ga.jspm.io/npm:@metamask/sdk@0.26.5/dist/browser/umd/metamask-sdk.js",
+          "@noble/curves/abstract/utils": "https://ga.jspm.io/npm:@noble/curves@1.2.0/esm/abstract/utils.js",
+          "@noble/curves/secp256k1": "https://ga.jspm.io/npm:@noble/curves@1.2.0/esm/secp256k1.js",
+          "@noble/hashes/crypto": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/crypto.js",
+          "@noble/hashes/hmac": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/hmac.js",
+          "@noble/hashes/ripemd160": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/ripemd160.js",
+          "@noble/hashes/sha256": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/sha256.js",
+          "@noble/hashes/sha3": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/sha3.js",
+          "@noble/hashes/utils": "https://ga.jspm.io/npm:@noble/hashes@1.3.2/esm/utils.js",
+          "@nucypher/nucypher-contracts": "https://ga.jspm.io/npm:@nucypher/nucypher-contracts@0.22.0/dist/src/index.js",
+          "@nucypher/nucypher-core": "https://ga.jspm.io/npm:@nucypher/nucypher-core@0.14.5/dist/es/index_fat.js",
+          "@nucypher/shared": "https://ga.jspm.io/npm:@nucypher/shared@0.2.3/dist/es/index.js",
+          "@web3-onboard/common": "https://ga.jspm.io/npm:@web3-onboard/common@2.4.2/dist/index.js",
+          "abitype": "https://ga.jspm.io/npm:abitype@1.0.0/dist/esm/exports/index.js",
+          "aes-js": "https://ga.jspm.io/npm:aes-js@3.0.0/index.js",
+          "array-buffer-byte-length": "https://ga.jspm.io/npm:array-buffer-byte-length@1.0.1/index.js",
+          "available-typed-arrays": "https://ga.jspm.io/npm:available-typed-arrays@1.0.7/index.js",
+          "axios": "./_/theme/axios.js",
+          "bech32": "https://ga.jspm.io/npm:bech32@1.1.4/index.js",
+          "bn.js": "https://ga.jspm.io/npm:bn.js@5.2.1/lib/bn.js",
+          "bnc-sdk": "https://ga.jspm.io/npm:bnc-sdk@4.6.9/dist/esm/index.js",
+          "bowser": "https://ga.jspm.io/npm:bowser@2.11.0/es5.js",
+          "buffer": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/buffer.js",
+          "call-bind": "https://ga.jspm.io/npm:call-bind@1.0.7/index.js",
+          "call-bind/callBound": "https://ga.jspm.io/npm:call-bind@1.0.7/callBound.js",
+          "crypto-es": "https://ga.jspm.io/npm:crypto-es@1.2.7/lib/index.js",
+          "deep-equal": "https://ga.jspm.io/npm:deep-equal@2.2.3/index.js",
+          "deepmerge": "https://ga.jspm.io/npm:deepmerge@4.3.1/dist/cjs.js",
+          "define-data-property": "https://ga.jspm.io/npm:define-data-property@1.1.4/index.js",
+          "define-properties": "https://ga.jspm.io/npm:define-properties@1.2.1/index.js",
+          "es-define-property": "https://ga.jspm.io/npm:es-define-property@1.0.0/index.js",
+          "es-errors": "https://ga.jspm.io/npm:es-errors@1.3.0/index.js",
+          "es-errors/eval": "https://ga.jspm.io/npm:es-errors@1.3.0/eval.js",
+          "es-errors/range": "https://ga.jspm.io/npm:es-errors@1.3.0/range.js",
+          "es-errors/ref": "https://ga.jspm.io/npm:es-errors@1.3.0/ref.js",
+          "es-errors/syntax": "https://ga.jspm.io/npm:es-errors@1.3.0/syntax.js",
+          "es-errors/type": "https://ga.jspm.io/npm:es-errors@1.3.0/type.js",
+          "es-errors/uri": "https://ga.jspm.io/npm:es-errors@1.3.0/uri.js",
+          "es-get-iterator": "https://ga.jspm.io/npm:es-get-iterator@1.1.3/index.js",
+          "ethers/lib/ethers": "https://ga.jspm.io/npm:ethers@5.7.2/lib/ethers.js",
+          "ethers/lib/utils": "https://ga.jspm.io/npm:ethers@5.7.2/lib/utils.js",
+          "eventemitter3": "https://ga.jspm.io/npm:eventemitter3@4.0.7/index.js",
+          "for-each": "https://ga.jspm.io/npm:for-each@0.3.3/index.js",
+          "function-bind": "https://ga.jspm.io/npm:function-bind@1.1.2/index.js",
+          "functions-have-names": "https://ga.jspm.io/npm:functions-have-names@1.2.3/index.js",
+          "get-intrinsic": "https://ga.jspm.io/npm:get-intrinsic@1.2.4/index.js",
+          "gopd": "https://ga.jspm.io/npm:gopd@1.0.1/index.js",
+          "has-property-descriptors": "https://ga.jspm.io/npm:has-property-descriptors@1.0.2/index.js",
+          "has-proto": "https://ga.jspm.io/npm:has-proto@1.0.3/index.js",
+          "has-symbols": "https://ga.jspm.io/npm:has-symbols@1.0.3/index.js",
+          "has-symbols/shams": "https://ga.jspm.io/npm:has-symbols@1.0.3/shams.js",
+          "has-tostringtag/shams": "https://ga.jspm.io/npm:has-tostringtag@1.0.2/shams.js",
+          "hash.js": "https://ga.jspm.io/npm:hash.js@1.1.7/lib/hash.js",
+          "hasown": "https://ga.jspm.io/npm:hasown@2.0.2/index.js",
+          "inherits": "https://ga.jspm.io/npm:inherits@2.0.4/inherits_browser.js",
+          "internal-slot": "https://ga.jspm.io/npm:internal-slot@1.0.7/index.js",
+          "intl-messageformat": "https://ga.jspm.io/npm:intl-messageformat@9.13.0/lib/index.js",
+          "is-arguments": "https://ga.jspm.io/npm:is-arguments@1.1.1/index.js",
+          "is-array-buffer": "https://ga.jspm.io/npm:is-array-buffer@3.0.4/index.js",
+          "is-bigint": "https://ga.jspm.io/npm:is-bigint@1.0.2/index.js",
+          "is-boolean-object": "https://ga.jspm.io/npm:is-boolean-object@1.1.2/index.js",
+          "is-callable": "https://ga.jspm.io/npm:is-callable@1.2.7/index.js",
+          "is-date-object": "https://ga.jspm.io/npm:is-date-object@1.0.5/index.js",
+          "is-map": "https://ga.jspm.io/npm:is-map@2.0.3/index.js",
+          "is-number-object": "https://ga.jspm.io/npm:is-number-object@1.0.7/index.js",
+          "is-regex": "https://ga.jspm.io/npm:is-regex@1.1.3/index.js",
+          "is-set": "https://ga.jspm.io/npm:is-set@2.0.3/index.js",
+          "is-shared-array-buffer": "https://ga.jspm.io/npm:is-shared-array-buffer@1.0.3/index.js",
+          "is-string": "https://ga.jspm.io/npm:is-string@1.0.6/index.js",
+          "is-symbol": "https://ga.jspm.io/npm:is-symbol@1.0.4/index.js",
+          "is-weakmap": "https://ga.jspm.io/npm:is-weakmap@2.0.2/index.js",
+          "is-weakset": "https://ga.jspm.io/npm:is-weakset@2.0.3/index.js",
+          "isarray": "https://ga.jspm.io/npm:isarray@2.0.5/index.js",
+          "isows": "https://ga.jspm.io/npm:isows@1.0.4/_esm/native.js",
+          "joi": "https://ga.jspm.io/npm:joi@17.9.1/dist/joi-browser.min.js",
+          "js-sha3": "https://ga.jspm.io/npm:js-sha3@0.8.0/src/sha3.js",
+          "lodash.defaults": "https://ga.jspm.io/npm:lodash.defaults@4.2.0/index.js",
+          "lodash.merge": "https://ga.jspm.io/npm:lodash.merge@4.6.2/index.js",
+          "lodash.partition": "https://ga.jspm.io/npm:lodash.partition@4.6.0/index.js",
+          "lodash.uniqby": "https://ga.jspm.io/npm:lodash.uniqby@4.7.0/index.js",
+          "minimalistic-assert": "https://ga.jspm.io/npm:minimalistic-assert@1.0.1/index.js",
+          "nanoid": "https://ga.jspm.io/npm:nanoid@4.0.2/index.browser.js",
+          "object-inspect": "https://ga.jspm.io/npm:object-inspect@1.13.2/index.js",
+          "object-is": "https://ga.jspm.io/npm:object-is@1.1.6/index.js",
+          "object-keys": "https://ga.jspm.io/npm:object-keys@1.1.1/index.js",
+          "object.assign": "https://ga.jspm.io/npm:object.assign@4.1.5/index.js",
+          "possible-typed-array-names": "https://ga.jspm.io/npm:possible-typed-array-names@1.0.0/index.js",
+          "process": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process.js",
+          "qs": "https://ga.jspm.io/npm:qs@6.12.3/lib/index.js",
+          "regexp.prototype.flags": "https://ga.jspm.io/npm:regexp.prototype.flags@1.5.2/index.js",
+          "rxjs": "https://ga.jspm.io/npm:rxjs@7.8.1/dist/esm5/index.js",
+          "rxjs/operators": "https://ga.jspm.io/npm:rxjs@7.8.1/dist/esm5/operators/index.js",
+          "scrypt-js": "https://ga.jspm.io/npm:scrypt-js@3.0.1/scrypt.js",
+          "semver": "https://ga.jspm.io/npm:semver@7.6.2/index.js",
+          "set-function-length": "https://ga.jspm.io/npm:set-function-length@1.2.2/index.js",
+          "set-function-name": "https://ga.jspm.io/npm:set-function-name@2.0.2/index.js",
+          "side-channel": "https://ga.jspm.io/npm:side-channel@1.0.6/index.js",
+          "stop-iteration-iterator": "https://ga.jspm.io/npm:stop-iteration-iterator@1.0.0/index.js",
+          "sturdy-websocket": "https://ga.jspm.io/npm:sturdy-websocket@0.1.12/dist/index.js",
+          "svelte-i18n": "https://ga.jspm.io/npm:svelte-i18n@3.7.4/dist/runtime.esm.js",
+          "svelte/store": "https://ga.jspm.io/npm:svelte@3.59.2/store/index.mjs",
+          "tslib": "https://ga.jspm.io/npm:tslib@2.6.3/tslib.es6.mjs",
+          "viem": "https://ga.jspm.io/npm:viem@2.12.0/_esm/index.js",
+          "viem/chains": "https://ga.jspm.io/npm:viem@2.12.0/_esm/chains/index.js",
+          "which-boxed-primitive": "https://ga.jspm.io/npm:which-boxed-primitive@1.0.2/index.js",
+          "which-collection": "https://ga.jspm.io/npm:which-collection@1.0.2/index.js",
+          "which-typed-array": "https://ga.jspm.io/npm:which-typed-array@1.1.15/index.js",
+          "zod": "https://ga.jspm.io/npm:zod@3.23.8/lib/index.mjs"
+        },
+        "https://ga.jspm.io/npm:bnc-sdk@4.6.9/": {
+          "nanoid": "https://ga.jspm.io/npm:nanoid@3.3.7/index.browser.js",
+          "rxjs": "https://ga.jspm.io/npm:rxjs@6.6.7/index.js"
+        }
+      }
+    }
+    </script>
+
+    <!-- ES Module Shims: Import maps polyfill for older browsers without import maps support (eg Safari 16.3) -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
+startup: {type: module, module: web3_onboard}

@@ -1,0 +1,30 @@
+properties:
+- {name: result, type: object, important: true, default_binding_prop: true}
+is_package: true
+events:
+- {name: event, default_event: true}
+toolbox_item: {group: Anvil Dapps, title: Taco Conditions}
+custom_component: true
+components:
+- name: content_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'MGKPMK,ERTNWJ'}
+  components:
+  - name: rich_text_1
+    properties: {align: center}
+    type: RichText
+    layout_properties: {grid_position: 'ICKPQG,BLYJGT'}
+    data_bindings:
+    - {property: visible, code: not self.conditions, writeback: false}
+- name: flow_panel_1
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'WCARXV,LXQGQY'}
+  components:
+  - name: add_button
+    properties: {text: New, icon: 'fa:plus', role: taco-conditions-outlined}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: add_button_click}
+container: {type: ColumnPanel}

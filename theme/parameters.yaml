@@ -1,0 +1,13 @@
+roles:
+- name: taco-condition
+  components: [Tabulator]
+- name: taco-condition-header
+  components: [Label]
+- name: taco-condition-detail
+  components: [Label]
+- name: taco-conditions-outlined
+  components: [Button]
+- name: outlined-card
+  components: [ColumnPanel]
+  display_in_toolbox: true
+  title: Outlined Card

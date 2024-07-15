@@ -1,0 +1,53 @@
+container: {type: ColumnPanel}
+components:
+- name: link_1
+  properties: {text: docs, url: 'https://docs.threshold.network/app-development/threshold-access-control-tac/conditions/contractcondition', align: right}
+  type: Link
+  layout_properties: {grid_position: 'XIMHUI,ZVMHDR'}
+- name: drop_down_1
+  properties:
+    items: [ERC20, ERC721]
+  type: DropDown
+  layout_properties: {grid_position: 'WJTBHF,QOLBXB'}
+  data_bindings:
+  - {property: selected_value, code: 'self.item["options"][''standardContractType'']', writeback: true}
+- name: text_box_1
+  properties: {placeholder: method}
+  type: TextBox
+  layout_properties: {grid_position: 'PLNBGJ,ORKJGN'}
+  data_bindings:
+  - {property: text, code: 'self.item["options"]["method"]', writeback: true}
+- name: text_box_2
+  properties: {placeholder: contract address}
+  type: TextBox
+  layout_properties: {grid_position: 'NFNFUR,QAYJVU'}
+  data_bindings:
+  - {property: text, code: 'self.item["options"]["contractAddress"]', writeback: true}
+- name: comparator_dropdown
+  properties: {}
+  type: DropDown
+  layout_properties: {grid_position: 'ETLKCF,KLUWNM'}
+  data_bindings:
+  - {property: selected_value, code: 'self.item["options"]["returnValueTest"]["comparator"]', writeback: true}
+- name: text_box_3
+  properties: {placeholder: value, type: text}
+  type: TextBox
+  layout_properties: {grid_position: 'ACUHQA,BFRQAZ'}
+  data_bindings:
+  - {property: text, code: 'self.item["options"][''returnValueTest'']["value"]', writeback: false}
+- name: flow_panel_1
+  properties: {align: right}
+  type: FlowPanel
+  layout_properties: {grid_position: 'AVQXHG,OWTILD'}
+  components:
+  - name: remove_button
+    properties: {text: remove}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: remove_button_click}
+  - name: save_button
+    properties: {text: save, role: taco-conditions-outlined}
+    type: Button
+    layout_properties: {}
+    event_bindings: {click: save_button_click}
+is_package: true

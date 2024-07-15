@@ -1,0 +1,33 @@
+container: {type: ColumnPanel}
+components:
+- name: time_card
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WUEABP,HMZDKZ'}
+  components:
+  - name: time_button
+    properties: {text: Time, icon: 'fa:clock-o'}
+    type: Button
+    layout_properties: {grid_position: 'CPQORI,LDJXWP'}
+    event_bindings: {click: button_clicked}
+- name: rpc_card
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WUEABP,EQLXSC'}
+  components:
+  - name: rpc_button
+    properties: {text: Remote Procedure Call, icon: 'fa:link', role: null}
+    type: Button
+    layout_properties: {grid_position: 'ARUPHY,PRQTKB'}
+    event_bindings: {click: button_clicked}
+- name: contract_card
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'WUEABP,WYPCCC'}
+  components:
+  - name: contract_button
+    properties: {text: Contract, icon: 'fa:handshake-o'}
+    type: Button
+    layout_properties: {grid_position: 'PQWVXR,OTQBCH'}
+    event_bindings: {click: button_clicked}
+is_package: true

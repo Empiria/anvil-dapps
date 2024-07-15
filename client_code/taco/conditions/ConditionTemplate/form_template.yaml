@@ -1,0 +1,18 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"BIAPRP":65}'}
+components:
+- name: header_label
+  properties: {icon: '', font_size: null, spacing_below: none, role: taco-condition-header, spacing_above: none}
+  type: Label
+  layout_properties: {grid_position: 'ZLWAZV,BIAPRP'}
+  data_bindings:
+  - {property: icon, code: self.icon, writeback: false}
+  - {property: text, code: self.title, writeback: false}
+- name: label_1
+  properties: {spacing_above: none, spacing_below: none, font: '', font_size: 12, role: taco-condition-detail}
+  type: Label
+  layout_properties: {grid_position: 'PRPAAL,LVSYGW'}
+  data_bindings:
+  - {property: text, code: self.detail, writeback: false}
+is_package: true
