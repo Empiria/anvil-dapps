@@ -14,7 +14,10 @@ _default = {
     "condition_type": "time_condition",
     "options": {
         "chain": None,
-        "returnValueTest": {"comparator": ">=", "value": dt.datetime.now().timestamp()},
+        "returnValueTest": {
+            "comparator": ">=",
+            "value": int(dt.datetime.now().timestamp()),
+        },
     },
 }
 
@@ -34,7 +37,9 @@ class TimeCondition(TimeConditionTemplate):
 
     @timestamp.setter
     def timestamp(self, value):
-        self.item["options"]["returnValueTest"]["value"] = dt.datetime.timestamp(value)
+        self.item["options"]["returnValueTest"]["value"] = int(
+            dt.datetime.timestamp(value)
+        )
 
     def save_button_click(self, **event_args):
         if self.mode == "create":
