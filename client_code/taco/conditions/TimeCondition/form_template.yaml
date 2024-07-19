@@ -9,7 +9,7 @@ components:
   type: DropDown
   layout_properties: {grid_position: 'JHTGBY,JBESMW'}
   data_bindings:
-  - {property: selected_value, code: 'self.item["options"]["returnValueTest"]["comparator"]', writeback: false}
+  - {property: selected_value, code: 'self.item["options"]["returnValueTest"]["comparator"]', writeback: true}
 - name: date_picker_1
   properties: {pick_time: true, visible: true}
   type: DatePicker
