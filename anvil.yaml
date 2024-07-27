@@ -185,4 +185,4 @@ native_deps:
 
     <!-- ES Module Shims: Import maps polyfill for older browsers without import maps support (eg Safari 16.3) -->
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
-startup: {type: module, module: web3_onboard}
+startup: {type: module, module: startup}

@@ -9,8 +9,7 @@
 # Copyright (c) 2024 Empiria Ltd
 #
 # This software is published at https://github.com/empiria/anvil_dapps
-
-from ..api import conditions
+from ...taco import conditions
 from .TimeCondition import TimeCondition
 from .RpcCondition import RpcCondition
 from .ContractCondition import ContractCondition

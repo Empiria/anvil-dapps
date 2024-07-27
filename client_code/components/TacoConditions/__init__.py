@@ -5,10 +5,10 @@
 # This software is published at https://github.com/empiria/anvil-dapps
 
 from ._anvil_designer import TacoConditionsTemplate
-from ..ConditionTemplate import ConditionTemplate
-from ..SelectCondition import SelectCondition
-from .. import utils
-from ...api import conditions
+from .ConditionTemplate import ConditionTemplate
+from .SelectCondition import SelectCondition
+from . import utils
+from ...taco import conditions
 import anvil
 
 try:
