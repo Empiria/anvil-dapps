@@ -12,5 +12,4 @@ decrypt = _taco.decrypt
 domains = _taco.domains
 encrypt = _taco.encrypt
 get_porter_uri = _taco.getPorterUri
-
-_taco.initialize()
+initialize = _taco.initialize
