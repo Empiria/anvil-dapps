@@ -39,19 +39,22 @@ Assuming you have a connected wallet, you can use TACo to encrypt and decrypt da
 e.g. To encrypt a message with a condition stored on the Polygon Amoy testnet that the current date must be no earlier than 1st January 2024:
 
 ```python
-from anvil_dapps import taco
+from anvil_dapps import ethers, taco
 
-domain = taco.domains.TESTNET
-ritual_id = 0
-message = "Hello, World!"
+taco.initialize()
+web3_provider = ethers.providers.Web3Provider(wallet.provider, "any")
 condition = taco.TimeCondition({"chain": 0x13882, "returnValueTest": {"comparator": ">", "value": 1704067200}})
-ciphertext = taco.encrypt(wallet.provider, domain, message, [condition], ritual_id)
+message = "Hello, World!"
+ritual_id = 0
+domain = taco.domains.TESTNET
+
+message_kit = taco.encrypt(web3_provider, domain, message.encode(), [condition], ritual_id, web3_provider.getSigner())
 ```
 
 and to decrypt the message:
 
 ```python
-plaintext = taco.decrypt(wallet.provider, domain, ciphertext)
+plaintext = taco.decrypt(web3_provider, domain, message_kit, taco.get_porter_uri(domain), web3_provider.getSigner())
 ```
 
 #### Conditions
