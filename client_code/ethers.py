@@ -3,5 +3,8 @@
 # Copyright (c) 2024 Empiria Ltd
 #
 # This software is published at https://github.com/empiria/anvil-dapps
+import anvil.js
 
-from .api import conditions, decrypt, domains, encrypt  # noqa unused_imports
+_ethers = anvil.js.import_from("ethers").ethers
+
+providers = _ethers.providers
