@@ -51,22 +51,21 @@ _data = [
 class TacoConditions(TacoConditionsTemplate):
     def __init__(self, **properties):
         self.rich_text_1.content = _no_conditions
+        self.tabulator = None
+        self.init_components(**properties)
+
+    def init_tabulator(self):
         self.tabulator = Tabulator(role="taco-conditions")
         self.tabulator.options = _options
         self.tabulator.columns = _columns
-        # self.tabulator.add_event_handler("table_built", self._on_built)
         self.tabulator.add_event_handler("row_click", self._on_row_click)
         self.content_panel.add_component(self.tabulator)
-        self.init_components(**properties)
 
     @property
     def conditions(self):
-        if not self.tabulator.initialized:
+        if not (self.tabulator and self.tabulator.initialized):
             return None
         return self.tabulator.getData()
-
-    def _on_built(self, sender, **event_args):
-        sender.replace_data(_data)
 
     def _on_row_click(self, sender, row, **event_args):
         sender.deselectRow()
@@ -100,6 +99,8 @@ class TacoConditions(TacoConditionsTemplate):
         return cls(_conditions)
 
     def add_button_click(self, **event_args):
+        if not self.tabulator:
+            self.init_tabulator()
         target = anvil.alert(
             SelectCondition(), large=True, buttons=None, title="Select Condition Type"
         )

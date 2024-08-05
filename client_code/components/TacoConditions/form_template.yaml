@@ -3,7 +3,10 @@ properties:
 is_package: true
 events:
 - {name: event, default_event: true}
-toolbox_item: {group: Anvil Dapps, title: Taco Conditions}
+toolbox_item:
+  group: Anvil Dapps
+  title: Taco Conditions
+  icon: {light: 'asset:designer_icons/threshold-logo-light.png', dark: 'asset:designer_icons/threshold-logo-dark.png'}
 custom_component: true
 components:
 - name: content_panel
