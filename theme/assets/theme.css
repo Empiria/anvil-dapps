@@ -1,12 +1,4 @@
-.anvil-role-outlined-card {
-  overflow: hidden;
-  border-radius: 12px;
-  background-color: %color:Surface%;
-  border: solid 1px %color:Outline%;
-  padding: 15px;
-}
-
-.anvil-role-taco-conditions.tabulator {   
+.anvil-role-taco-conditions.tabulator {
     background-color: transparent;
 
     & .tabulator-tableholder .tabulator-table {
@@ -17,29 +9,29 @@
         background-color: transparent;
         border-radius: 24px;
         border: 0;
-    
+
         &.tabulator-selectable:hover {
             background-color: %color:Surface Variant% !important;
         }
-    
+
         &.tabulator-selected {
             background-color: %color:Primary Container% !important;
-    
+
             &:hover {
                 background-color: %color:Primary Container% !important;
             }
-        } 
+        }
     }
 }
 
 .anvil-role-taco-condition-header {
     padding-top: 0px;
-    padding-bottom: 0px 
+    padding-bottom: 0px
 }
 
 .anvil-role-taco-condition-detail {
     padding-top: 0px;
-    padding-bottom: 0px 
+    padding-bottom: 0px
 }
 
 .anvil-role-taco-conditions-outlined > .btn {
