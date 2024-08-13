@@ -2,7 +2,7 @@ properties:
 - {name: result, type: object, important: true, default_binding_prop: true}
 is_package: true
 events:
-- {name: event, default_event: true}
+- {name: conditions_changed, default_event: true, description: When a condition is added or removed}
 toolbox_item:
   group: Anvil Dapps
   title: Taco Conditions

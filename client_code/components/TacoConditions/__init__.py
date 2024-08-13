@@ -83,10 +83,13 @@ class TacoConditions(TacoConditionsTemplate):
             return
         row.update(response)
         row.reformat()
+        self.raise_event("conditions_changed")
         self.refresh_data_bindings()
 
     @property
     def result(self):
+        if not self.tabulator:
+            return None
         _conditions = [
             utils.condition_types[c["condition_type"]]["constructor"](c["options"])
             for c in self.tabulator.get_data()
@@ -115,4 +118,5 @@ class TacoConditions(TacoConditionsTemplate):
         )
         if response:
             self.tabulator.add_row(response)
+            self.raise_event("conditions_changed")
             self.refresh_data_bindings()
