@@ -79,6 +79,7 @@ class TacoConditions(TacoConditionsTemplate):
             return
         if response == "remove":
             row.delete()
+            self.raise_event("conditions_changed")
             self.refresh_data_bindings()
             return
         row.update(response)
