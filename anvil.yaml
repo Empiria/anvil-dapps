@@ -1,37 +1,21 @@
 allow_embedding: false
-package_name: anvil_dapps
 name: Anvil Dapps
-runtime_options:
-  version: 3
-  client_version: '3'
-  server_version: python3-full
-  server_spec: null
-  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-startup_form: null
 native_deps:
   head_html: |-
-    <!--
-      JSPM Generator Import Map
-      Edit URL: https://generator.jspm.io/#Zc3BDYMwDEBRH2AOJsA0RhVXL9EBTGKptCGpEleo2xeucP5P+m0D0HaPZItFDcDp63+fp5bBxGe+IeEEvOk89jnNWUoYfC7KhEToTmVJL/Wmod8kRrW6K+cualWTVer7qEigtt8q33FC+gMa40ItjQA
-    -->
-     <script type="importmap">
+    <script type='importmap'>
     {
       "imports": {
-        "@nucypher/taco": "https://ga.jspm.io/npm:@nucypher/taco@0.2.7/dist/es/index.js",
-        "@web3-onboard/core": "https://ga.jspm.io/npm:@web3-onboard/core@2.22.1/dist/index.js",
+        "@nucypher/taco": "https://ga.jspm.io/npm:@nucypher/taco@0.3.0/dist/es/index.js",
+        "@web3-onboard/core": "https://ga.jspm.io/npm:@web3-onboard/core@2.22.2/dist/index.js",
         "@web3-onboard/injected-wallets": "https://ga.jspm.io/npm:@web3-onboard/injected-wallets@2.11.1/dist/index.js",
         "@web3-onboard/metamask": "https://ga.jspm.io/npm:@web3-onboard/metamask@2.1.2/dist/index.js",
         "ethers": "https://ga.jspm.io/npm:ethers@5.7.2/lib.esm/index.js"
       },
       "scopes": {
         "https://ga.jspm.io/": {
-          "#lib/adapters/http.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
-          "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
-          "#lib/platform/node/index.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
+          "#lib/adapters/http.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/helpers/null.js",
+          "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/helpers/null.js",
+          "#lib/platform/node/index.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/platform/browser/index.js",
           "#util.inspect.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
           "@ethersproject/abi": "https://ga.jspm.io/npm:@ethersproject/abi@5.7.0/lib.esm/index.js",
           "@ethersproject/abstract-provider": "https://ga.jspm.io/npm:@ethersproject/abstract-provider@5.7.0/lib.esm/index.js",
@@ -83,7 +67,7 @@ native_deps:
           "aes-js": "https://ga.jspm.io/npm:aes-js@3.0.0/index.js",
           "array-buffer-byte-length": "https://ga.jspm.io/npm:array-buffer-byte-length@1.0.1/index.js",
           "available-typed-arrays": "https://ga.jspm.io/npm:available-typed-arrays@1.0.7/index.js",
-          "axios": "./_/theme/axios.js",
+          "axios": "https://ga.jspm.io/npm:axios@1.7.3/index.js",
           "bech32": "https://ga.jspm.io/npm:bech32@1.1.4/index.js",
           "bn.js": "https://ga.jspm.io/npm:bn.js@5.2.1/lib/bn.js",
           "bnc-sdk": "https://ga.jspm.io/npm:bnc-sdk@4.6.9/dist/esm/index.js",
@@ -153,13 +137,13 @@ native_deps:
           "object-keys": "https://ga.jspm.io/npm:object-keys@1.1.1/index.js",
           "object.assign": "https://ga.jspm.io/npm:object.assign@4.1.5/index.js",
           "possible-typed-array-names": "https://ga.jspm.io/npm:possible-typed-array-names@1.0.0/index.js",
-          "process": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process.js",
-          "qs": "https://ga.jspm.io/npm:qs@6.12.3/lib/index.js",
+          "process": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process-production.js",
+          "qs": "https://ga.jspm.io/npm:qs@6.13.0/lib/index.js",
           "regexp.prototype.flags": "https://ga.jspm.io/npm:regexp.prototype.flags@1.5.2/index.js",
           "rxjs": "https://ga.jspm.io/npm:rxjs@7.8.1/dist/esm5/index.js",
           "rxjs/operators": "https://ga.jspm.io/npm:rxjs@7.8.1/dist/esm5/operators/index.js",
           "scrypt-js": "https://ga.jspm.io/npm:scrypt-js@3.0.1/scrypt.js",
-          "semver": "https://ga.jspm.io/npm:semver@7.6.2/index.js",
+          "semver": "https://ga.jspm.io/npm:semver@7.6.3/index.js",
           "set-function-length": "https://ga.jspm.io/npm:set-function-length@1.2.2/index.js",
           "set-function-name": "https://ga.jspm.io/npm:set-function-name@2.0.2/index.js",
           "side-channel": "https://ga.jspm.io/npm:side-channel@1.0.6/index.js",
@@ -182,7 +166,22 @@ native_deps:
       }
     }
     </script>
-
-    <!-- ES Module Shims: Import maps polyfill for older browsers without import maps support (eg Safari 16.3) -->
-    <script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
-startup: {type: module, module: startup}
+package_name: anvil_dapps
+runtime_options:
+  client_version: '3'
+  legacy_features:
+    __dict__: true
+    bootstrap3: true
+    class_names: true
+    root_container: true
+  server_spec: null
+  server_version: python3-full
+  version: 3
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+startup:
+  module: startup
+  type: module
+startup_form: null
