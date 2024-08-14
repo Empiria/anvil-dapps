@@ -1,8 +1,7 @@
 allow_embedding: false
 name: Anvil Dapps
 native_deps:
-  head_html: |-
-    <script type='importmap'>
+  import_map: |
     {
       "imports": {
         "@nucypher/taco": "https://ga.jspm.io/npm:@nucypher/taco@0.3.0/dist/es/index.js",
@@ -13,9 +12,9 @@ native_deps:
       },
       "scopes": {
         "https://ga.jspm.io/": {
-          "#lib/adapters/http.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/helpers/null.js",
-          "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/helpers/null.js",
-          "#lib/platform/node/index.js": "https://ga.jspm.io/npm:axios@1.7.3/lib/platform/browser/index.js",
+          "#lib/adapters/http.js": "https://ga.jspm.io/npm:axios@1.7.4/lib/helpers/null.js",
+          "#lib/platform/node/classes/FormData.js": "https://ga.jspm.io/npm:axios@1.7.4/lib/helpers/null.js",
+          "#lib/platform/node/index.js": "https://ga.jspm.io/npm:axios@1.7.4/lib/platform/browser/index.js",
           "#util.inspect.js": "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/@empty.js",
           "@ethersproject/abi": "https://ga.jspm.io/npm:@ethersproject/abi@5.7.0/lib.esm/index.js",
           "@ethersproject/abstract-provider": "https://ga.jspm.io/npm:@ethersproject/abstract-provider@5.7.0/lib.esm/index.js",
@@ -67,7 +66,7 @@ native_deps:
           "aes-js": "https://ga.jspm.io/npm:aes-js@3.0.0/index.js",
           "array-buffer-byte-length": "https://ga.jspm.io/npm:array-buffer-byte-length@1.0.1/index.js",
           "available-typed-arrays": "https://ga.jspm.io/npm:available-typed-arrays@1.0.7/index.js",
-          "axios": "https://ga.jspm.io/npm:axios@1.7.3/index.js",
+          "axios": "https://ga.jspm.io/npm:axios@1.7.4/index.js",
           "bech32": "https://ga.jspm.io/npm:bech32@1.1.4/index.js",
           "bn.js": "https://ga.jspm.io/npm:bn.js@5.2.1/lib/bn.js",
           "bnc-sdk": "https://ga.jspm.io/npm:bnc-sdk@4.6.9/dist/esm/index.js",
@@ -165,7 +164,6 @@ native_deps:
         }
       }
     }
-    </script>
 package_name: anvil_dapps
 runtime_options:
   client_version: '3'

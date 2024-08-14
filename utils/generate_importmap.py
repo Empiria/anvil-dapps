@@ -43,15 +43,11 @@ def generate_importmap(modules, environments, resolutions):
     return buffer.read().decode()
 
 
-def head_html(importmap):
-    return f"<script type='importmap'>\n{importmap}</script>"
-
-
 def main():
     importmap = generate_importmap(JSPMIO_MODULES, ENVIRONMENTS, RESOLUTIONS)
     with open("anvil.yaml") as f:
         anvil_yaml = yaml.safe_load(f)
-    anvil_yaml["native_deps"]["head_html"] = head_html(importmap)
+    anvil_yaml["native_deps"]["import_map"] = importmap
     with open("anvil.yaml", "w") as f:
         yaml.dump(anvil_yaml, f)
 
